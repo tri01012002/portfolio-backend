@@ -22,6 +22,7 @@ const projects = [
             "Stripe",
             "Prisma"
         ],
+        "image": "/images/ecommerce.jpg",
         "githubUrl": "https://github.com",
         "liveUrl": "https://example.com"
     },
@@ -35,6 +36,7 @@ const projects = [
             "Socket.io",
             "MongoDB"
         ],
+        "image": "/images/task.jpg",
         "githubUrl": "https://github.com",
         "liveUrl": "https://example.com"
     },
@@ -51,6 +53,7 @@ const projects = [
             "Gradio",
             "Diffusers"
         ],
+        "image": "/images/texttoimage.jpg",
         "githubUrl": "https://github.com/tri01012002/sdxl-turbo-tringuyen",
         "liveUrl": "https://example.com"
     },
@@ -68,6 +71,7 @@ const projects = [
             "Xilinx Zynq UltraScale",
             "MPSoC FPGA board"
         ],
+        "image": "/images/malware.jpg",
         "githubUrl": "https://github.com",
         "liveUrl": "https://example.com"
     },
@@ -86,6 +90,7 @@ const projects = [
             "Docker",
             "Flask"
         ],
+        "image": "/images/streamlit.jpg",
         "githubUrl": "https://github.com/tri01012002/eatlab",
         "liveUrl": "https://example.com"
     }
