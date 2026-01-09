@@ -101,8 +101,36 @@ app.get('/', (req, res) => {
     res.send('Portfolio Backend API is running');
 });
 
+// Messages storage (in-memory)
+const messages = [];
+
 app.get('/api/projects', (req, res) => {
     res.json(projects);
+});
+
+app.post('/api/contact', (req, res) => {
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+
+    const newMessage = {
+        id: messages.length + 1,
+        name,
+        email,
+        message,
+        date: new Date().toISOString()
+    };
+
+    messages.push(newMessage);
+    console.log('New Message received:', newMessage);
+
+    res.status(201).json({ success: true, message: 'Message sent successfully' });
+});
+
+app.get('/api/messages', (req, res) => {
+    res.json(messages);
 });
 
 // Start Server
